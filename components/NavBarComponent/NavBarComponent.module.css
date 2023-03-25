@@ -1,0 +1,28 @@
+.navBar {
+    background-color: #22759f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#c2def1;
+    
+}
+.title{
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+   font-weight: bold;
+   font-size: 1.2rem;
+}
+
+.menuLink{
+    text-decoration: none;
+    color:#c2def1;
+   
+}
+.list{
+    padding: 1rem; 
+    
+}

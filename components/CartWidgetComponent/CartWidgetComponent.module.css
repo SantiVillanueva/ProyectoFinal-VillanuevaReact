@@ -1,0 +1,25 @@
+.cartWidget{ 
+        display:  flex;
+        padding:  1rem;
+        margin-right: 1rem;
+        font-size: 20px;
+   
+}
+
+.cartImg{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+}
+
+.cartLenght{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8cadc0 ;
+    color: black;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}

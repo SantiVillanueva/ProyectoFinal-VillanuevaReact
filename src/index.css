@@ -5,9 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #dee1ed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.product{
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px black;
+  padding: 20px;
+  margin: 10px;
+  background-color:  #8cadc0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.productInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: #989DA3;
+  box-shadow: 1px 1px 3px black;
+  width: 100%;
+ 
+}
+.productImg{
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px black;
+  margin-bottom: 1rem;
+}
+
+.productDetails{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+
+}
+
+.link{
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(54, 18, 12);
 }

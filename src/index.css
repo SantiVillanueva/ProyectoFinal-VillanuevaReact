@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #dee1ed;
+ 
 }
 
 code {
@@ -19,6 +19,8 @@ code {
   grid-gap: 5rem;
   justify-content: center;
   align-content: center;
+
+
 }
 
 .product{

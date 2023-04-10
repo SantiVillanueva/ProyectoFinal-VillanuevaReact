@@ -1,18 +1,16 @@
 import styles from "./NavBarComponent.module.css"
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { CartWidgetComponent } from '../CartWidgetComponent/CartWidgetComponent'
-import {ThemeContext} from "../../context/ThemeContext"
+import { DarkModeIcon } from "../DarkModeIcon/DarkModeIcon"
+
 
 // llamar themeContext y ver que onda todo esa movida modo oscuro
 export const NavBarComponent = () => {
   
-  const {isDarkMode, setIsDarkMode} = useContext(ThemeContext)
 
-  const handleThemeChange = () => {
-    setIsDarkMode(!isDarkMode);
-  }
-  
+  //dark mode icon 
+ 
   return (
     <header className={styles.navBar} >
         <Link className={styles.title}  to='/' ><h1>MSV Serigrafía</h1></Link>
@@ -24,10 +22,12 @@ export const NavBarComponent = () => {
           <Link className={styles.list} to='/Contacto' >Contacto</Link>
           
         </div>
-            <div>
-              <CartWidgetComponent/>
-              <button onClick={handleThemeChange}>{isDarkMode ? "light" : "dark"}</button>
-            </div>  
+            
+          <div>  
+             <CartWidgetComponent/>          
+             <DarkModeIcon/>
+      
+        </div>
     </header>
   )
 }

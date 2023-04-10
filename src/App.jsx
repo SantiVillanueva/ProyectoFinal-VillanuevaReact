@@ -7,11 +7,11 @@ function App() {
   return ( 
     <div>  
     <ThemeProvider>
-      <CartProvider>
-        <MainLayout>
+      <MainLayout>
+        <CartProvider>
           <MainRoutes/>
-        </MainLayout>
-      </CartProvider>
+        </CartProvider>
+      </MainLayout>
     </ThemeProvider>
     </div>
     );

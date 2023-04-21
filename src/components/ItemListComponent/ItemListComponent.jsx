@@ -1,10 +1,11 @@
 import React from 'react'
 import { ItemComponent } from '../ItemComponent/ItemComponent';
 import {collection, getDocs, getFirestore } from "firebase/firestore";
+import Loader from '../Loader/Loader';
 
 export const ItemListComponent = () => {
   const [productsData, setProductsData] = React.useState([]);
-  //console.log(productsData); aca si funciona
+  const [loading, setLoading] = React.useState(true);
 
 React.useEffect (()=>{
   const db = getFirestore();
@@ -23,13 +24,15 @@ React.useEffect (()=>{
     }) 
     .catch (err => console.log (err))
     .then(() => {
-      console.log(productsData); //no funciona revisar
+      setLoading(false);
 
     });
 }, []);
 
-  return (
-    <div >
+  return loading ? (
+    <Loader/>
+  ) : (
+    <div className='cardContainer'>
       {productsData.map((producto) => (
         <ItemComponent key={producto.id} producto = {producto} />
       ))}

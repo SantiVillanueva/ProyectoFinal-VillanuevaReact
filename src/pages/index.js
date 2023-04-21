@@ -1,4 +1,5 @@
 export * from "./ItemDetailsContainer"
 export * from "./ItemCategoryContainer"
-export * from  "./Contacto"
+export * from  "./Checkout"
 export * from "./Cart"
+export * from "./Admin"

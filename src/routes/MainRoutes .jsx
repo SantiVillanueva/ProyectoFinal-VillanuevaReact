@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import {ItemDetailsContainer, ItemCategoryContainer, Contacto, Cart} from "../pages"
+import {ItemDetailsContainer, ItemCategoryContainer, Cart, Admin, Checkout} from "../pages"
 import { NavBarComponent, ItemListComponent } from '../components'
 
 export const MainRoutes  = () => {
@@ -10,10 +10,11 @@ export const MainRoutes  = () => {
 
         <Routes>
             <Route exact path='/' element={<ItemListComponent/>}/>
-            <Route exact path='/item/:id' element={<ItemDetailsContainer/>}/>
+            <Route exact path='/item/:productId' element={<ItemDetailsContainer/>}/>
             <Route exact path='/categoria/:category' element={<ItemCategoryContainer/>}/>
-            <Route exact path='/contacto/' element={<Contacto/>}/>
+            <Route exact path='/Checkout/' element={<Checkout/>}/>
             <Route exact path='/cart/' element={<Cart/>}/>
+            <Route exact path='/admin/' element={<Admin />}/>
             
         </Routes>
         

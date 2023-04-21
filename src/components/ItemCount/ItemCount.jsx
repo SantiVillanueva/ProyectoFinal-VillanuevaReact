@@ -1,6 +1,32 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context';
 import { useParams } from 'react-router-dom';
+import Button from '@mui/material/Button';
+const styles = {
+  buttons:{
+    display: "flex",
+    flexDireccion: "row",
+    padding: "5px",
+    alingItems: "center",
+    justifyContent: "center"
+
+  },
+  buttonsMoreLess:{
+    margin: "10px",
+    padding: "6px",
+    fontSize: "20px"   
+
+  },
+  stateData:{
+   fontSize: "25px",
+    padding: "12px",
+    fontWeight: "bold",
+    color: "green"
+  },
+  add:{
+    margin: "10px"
+  }
+}
 
 export const CartButtons = () => {
     const[state, setState] = React.useState(1);
@@ -17,10 +43,6 @@ const handleLessClick = () => {
     
 }
 
-const handleOnChange  = (e) => {
-    console.log(e.target.value)
-    
-}
 
 const addToCart = () => {
     const existingProduct = itemCount.products.find(
@@ -41,11 +63,14 @@ const addToCart = () => {
   };
 
 return (
-    <div>
-    <button onClick = {handleLessClick}>-</button>
-    <input onChange={handleOnChange} placeholder= "agregar" value={state} />
-    <button onClick={handleMoreClick}>+</button>
-    <button onClick={addToCart}>Agregar al carrito</button>
+    <div style={styles.buttons}>
+      <Button color="success" variant="contained" style={styles.buttonsMoreLess} onClick = {handleLessClick}>-</Button>
+      <div style={styles.stateData}>{state}</div>
+      <Button color="success" variant="contained" style={styles.buttonsMoreLess} onClick = {handleMoreClick}>+</Button>
+   
+    <Button style={styles.add} onClick={addToCart} variant="contained" color="success">
+    Agregar al carrito
+      </Button>
     </div>
   )
 }

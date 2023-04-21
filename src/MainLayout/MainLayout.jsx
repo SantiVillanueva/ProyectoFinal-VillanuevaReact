@@ -1,15 +1,13 @@
-import React, {useContext} from 'react'
-import { ThemeContext } from '../context';
+import React from 'react'
+
 
 export const MainLayout = ({children}) => {
-
-const {isDarkMode} = useContext(ThemeContext);
 
 
 
     const mainLayoutStyles = {
-        backgroundColor: isDarkMode ? "white" : "black",
-        color: isDarkMode ?  "black" : "white",
+        backgroundColor:"white",
+        color:"white",
         display: "flex",      
         flexDirection: "column",
         minHeight: "100vh",

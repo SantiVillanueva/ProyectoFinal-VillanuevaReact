@@ -68,3 +68,8 @@ code {
   text-decoration: none;
   color: rgb(54, 18, 12);
 }
+
+img{
+  height: 300px;
+  width: 300px;
+}

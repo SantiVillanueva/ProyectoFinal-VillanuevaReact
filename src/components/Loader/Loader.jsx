@@ -1,14 +1,16 @@
-/*import * as React from "react";
-import Skeleton from "@mui/material/Skeleton";
-import Stack from "@mui/material/Stack";
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
-export const Loader = () => {
+export default function Loader() {
+
   return (
-    <Stack spacing={1}>
-      <Skeleton variant="text" sx={{ fontSize: "5rem" }} />
-      <Skeleton variant="rectangular" width={210} height={160} />
-      <Skeleton variant="rounded" width={210} height={60} />
-    </Stack>
+    <Box sx={{   height: "100vh",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",}}>
+      <CircularProgress />
+    </Box>
   );
 }
-*/

@@ -1,7 +1,6 @@
 import React from 'react';
-import { productsData } from '../../json';
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
+
 
 export const ItemComponent = ({producto}) => {
  
@@ -15,7 +14,7 @@ export const ItemComponent = ({producto}) => {
             <span> $ {producto.precio}</span>
             <Link className='link' to={`/item/${producto.id}`} >Detalles del producto</Link>
           </div>
-
+        
           
         </div>
 

@@ -22,6 +22,8 @@ Descargar el repositorio, instalar sus dependencias y luego ejecutar de manera l
 
 *Firebase: v9.19.1
 
+*Toastify": v9.1.2
+
 
 ## Servidor Local
 
